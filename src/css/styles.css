@@ -114,6 +114,7 @@
 
 .gallery-item img {
   display: block;
+  object-fit: cover;
   width: 360px;
   height: 200px;
 }
