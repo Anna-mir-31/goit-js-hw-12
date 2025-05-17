@@ -8,11 +8,127 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.form input[type='text'] {
+  width: 300px;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form input[type='text']:hover {
+  border: 1px solid #000000;
+}
+
+/* Focused (pressed) */
+.form input[type='text']:focus {
+  border: 1px solid #4e75ff;
+}
+.form button {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4e75ff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+.is-hidden {
+  display: none;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #808080;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  width: 360px;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  display: block;
+  width: 360px;
+  height: 200px;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 20px;
+  font-size: 14px;
+}
+
+.info-item {
+  text-align: center;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
